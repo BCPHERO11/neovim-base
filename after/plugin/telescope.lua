@@ -1,0 +1,6 @@
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ba', builtin.find_files, {})
+vim.keymap.set('n', '<C-a>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>bp', function()
+	builtin.grep_string({ search = vim.fn.input('Palavra > ') })
+end)
