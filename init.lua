@@ -1,3 +1,4 @@
+
 require('config.lsp')
 
 local vim = vim
@@ -11,8 +12,8 @@ vim.call('plug#begin')
 	Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 
 	--Tema do terminal
-	Plug('oxfist/night-owl.nvim')
-	Plug('navarasu/onedark.nvim')
+	Plug('folke/tokyonight.nvim')
+	Plug('tomasr/molokai')
 
 	--treesitter (verifica os itens a fim de colorir)
 	Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
@@ -35,10 +36,8 @@ vim.call('plug#begin')
 vim.call('plug#end')
 
 --configurando o plano de fundo
-require("onedark").setup{
-	style = 'darker'
-}
-vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("molokai")
+--vim.cmd.colorscheme("tokyonight-moon")
 
 --Configurando os LSPs
 
